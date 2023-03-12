@@ -21,6 +21,10 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="my_lib.cpp" />
+		<Unit filename="my_lib.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
