@@ -10,11 +10,20 @@ int main()
     int x,y,z;
 
     cout << "Введіть x: ";
-    cin >> x;
+    if(!(cin >> x) || isdigit(x)){
+        std::cerr << "Помилка: Недійсне значення у x.";
+        return 1;
+    }
     cout << "Введіть y: ";
-    cin >> y;
+    if(!(cin >> y) || isdigit(y)){
+        std::cerr << "Помилка: Недійсне значення у y.";
+        return 1;
+    }
     cout << "Введіть z: ";
-    cin >> z;
+    if(!(cin >> z) || isdigit(z)){
+        std::cerr << "Помилка: Недійсне значення у z.";
+        return 1;
+    }
     cout << "Результат S: " << s_calculation(x,y,z) << std::endl;
 
 
