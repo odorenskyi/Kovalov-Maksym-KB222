@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1678631970 source:a:\kovalov-maksym-kb222\lab08\prj\main\main.cpp
+1678864593 source:a:\kovalov-maksym-kb222\lab08\prj\main\main.cpp
 	<iostream>
 	<cmath>
 	<locale>
 	"my_lib.h"
 
-1678632413 a:\kovalov-maksym-kb222\lab08\prj\main\my_lib.h
+1678634268 a:\kovalov-maksym-kb222\lab08\prj\main\my_lib.h
 
-1678632415 source:a:\kovalov-maksym-kb222\lab08\prj\main\my_lib.cpp
+1678865920 source:a:\kovalov-maksym-kb222\lab08\prj\main\my_lib.cpp
 	<cmath>
 	<iostream>
 
