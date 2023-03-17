@@ -20,7 +20,7 @@ float s_calculation(float x, float y, float z){
         return 1;
     }
 
-        s = 1.0/2.0 * ((pow(y,2) + 2 * z) / sqrt(7 * pi + x)) - sqrt(pow(e, abs(x)) + sqrt(abs(y - z) / sin(z * y)));
+        s = 0.5*((pow(y,2)+ 2*z)/sqrt(7*pi + x)) - sqrt(pow(e,abs(x))+ (sqrt(abs(y-z)))/sin(z*y));
         return s;
 
 }
