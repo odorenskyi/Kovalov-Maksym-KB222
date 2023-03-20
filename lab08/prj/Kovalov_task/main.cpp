@@ -3,25 +3,29 @@
 #include <locale>
 #include "my_lib.h"
 
-#define ARR_S 7
-
 using namespace std;
+
+
+
 
 int main()
 {
     setlocale(LC_ALL, "ukr");
-    const float x[ARR_S] = {3, 2,  4,   1, 3,   2,  0.4};
-    const float y[ARR_S] = {-3, 8, 0.8, 3, 5,   11.1, 12};
-    const float z[ARR_S] = {2,  1, 3.2, 3, 1.4, 4,  6.4};
-        const float expected_res[ARR_S] = {-3.9996, 3.5651, -6.8708, -0.0846, -1.9863, 9.6643, 14.7604};
+    int x, y, z;
+    char a, b;
+    cout << copyright() << endl << endl;
 
-    for(short int i=0; i<ARR_S; i++){
-        const float currResult = round(s_calculation(x[i], y[i], z[i])*10000) / 10000;
-        if (currResult == expected_res[i]){
-            cout << "Test id #" << i+1 << " - Passed\n";
-        }else {
-            cout << "Test id #" << i+1 << " - Failed\n";
-        }
+
+    cout << "¬вед≥ть x, y, z" << endl;
+    cin >> x >> y >> z;
+
+
+    cout << "¬вед≥ть a та b" << endl;
+    cin >> a >> b;
+    if (expression(a, b) == 1){
+        cout << "–езультат виразу: a + 5 > b + 2 -> True" << endl;
+    }else{
+        cout << "–езультат виразу: a + 5 > b + 2 -> False" << endl;
     }
 
 

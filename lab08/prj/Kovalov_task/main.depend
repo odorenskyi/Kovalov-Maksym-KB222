@@ -11,3 +11,15 @@
 	<cmath>
 	<iostream>
 
+1679304781 source:a:\kovalov-maksym-kb222\lab08\prj\kovalov_task\main.cpp
+	<iostream>
+	<cmath>
+	<locale>
+	"my_lib.h"
+
+1679304194 a:\kovalov-maksym-kb222\lab08\prj\kovalov_task\my_lib.h
+
+1679304729 source:a:\kovalov-maksym-kb222\lab08\prj\kovalov_task\my_lib.cpp
+	<iostream>
+	<stdlib.h>
+
