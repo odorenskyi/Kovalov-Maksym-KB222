@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1681075637 source:a:\kovalov-maksym-kb222\lab09\prj\testdriver\main.cpp
+	<iostream>
+	"../ModulesKovalov/kovalov_lib.h"
+
+1681073622 a:\kovalov-maksym-kb222\lab09\prj\moduleskovalov\kovalov_lib.h
+
