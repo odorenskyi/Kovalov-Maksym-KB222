@@ -24,3 +24,22 @@ float s_calculation(float x, float y, float z){
         return s;
 
 }
+float kwh_calculation(float kwh){
+    float kwh_cost;
+    kwh_cost = (130,843 / 100);
+    if(kwh > 0){
+        if(kwh <= 150){
+            return kwh*kwh_cost;
+
+        }else if(kwh >= 151 && kwh <= 800){
+            kwh_cost = (241,945 / 100);
+            return kwh*kwh_cost;
+        }else{
+            kwh_cost = (534,047 / 100);
+            return kwh*kwh_cost;
+        }
+
+    }else{
+        return 1;
+    }
+}
