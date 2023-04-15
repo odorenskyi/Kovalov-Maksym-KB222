@@ -43,3 +43,8 @@ float kwh_calculation(float kwh){
        }
 
 }
+
+float avg_calculation(float tempSum){
+    // Обчислення фаренгейта
+    return 32 + 9/5 * tempSum;
+}
