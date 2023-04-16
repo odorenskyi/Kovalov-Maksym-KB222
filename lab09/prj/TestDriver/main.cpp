@@ -32,6 +32,10 @@ int main()
     // 9.3
     int N;
     cin >> N;
+    if(cin.fail()){
+        std::cout << ("Введений неправильний тип даних. Введіть число.");
+        return -1;
+    }
     bool is_zero_bit = (N >> 9) % 2 == 0;
     if(is_zero_bit == false){
         cout << "Кількість двійкових одиниць у N:"<< binary_calculation(N) << endl;
