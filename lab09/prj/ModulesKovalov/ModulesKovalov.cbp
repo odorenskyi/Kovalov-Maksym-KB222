@@ -19,7 +19,10 @@
 				</Compiler>
 			</Target>
 		</Build>
-		<Unit filename="main.c">
+		<Unit filename="kovalov_lib.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="main.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
