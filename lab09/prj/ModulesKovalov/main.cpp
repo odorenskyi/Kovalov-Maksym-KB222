@@ -27,23 +27,19 @@ float s_calculation(float x, float y, float z){
 
 }
 
-float kwh_calculation(float kwh){
-   if(kwh < 0){
-       std::cout << "Отримане число менше ";
-       return NULL;
-   }
-   float kwh_cost = 5.34047;
-       if(kwh >= 801){
-           return kwh*kwh_cost;
-
-       }else if(kwh >= 151 && kwh <= 800){
-           kwh_cost = 2.41945;
-           return kwh*kwh_cost;
-       }else if(kwh > 0 && kwh <= 150){
-           kwh_cost = 1.30843;
-           return kwh*kwh_cost;
-       }
-
+float kwh_calculation(float kwh) {
+    float kwh_cost = 5.34047;
+    if (kwh > 800) {
+        return kwh * kwh_cost;
+    } else if (kwh >= 151 && kwh <= 800) {
+        kwh_cost = 2.41945;
+        return kwh * kwh_cost;
+    } else if (kwh >= 0 && kwh <= 150) {
+        kwh_cost = 1.30843;
+        return kwh * kwh_cost;
+    }else{
+        return 0.0f;
+    }
 }
 
 float avg_calculation(float tempSum){
