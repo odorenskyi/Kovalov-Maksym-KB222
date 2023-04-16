@@ -43,7 +43,7 @@ float kwh_calculation(float kwh) {
 }
 
 float avg_calculation(float tempSum){
-    return 32 + 9/5 * tempSum;
+    return tempSum * 9/5 + 32;
 }
 
 
