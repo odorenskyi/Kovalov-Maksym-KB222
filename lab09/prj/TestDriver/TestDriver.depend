@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1681645600 source:a:\kovalov-maksym-kb222\lab09\prj\testdriver\main.cpp
+1681651926 source:a:\kovalov-maksym-kb222\lab09\prj\testdriver\main.cpp
 	<iostream>
+	<cmath>
 	"../moduleskovalov/kovalov_lib.h"
 
 1681645042 a:\kovalov-maksym-kb222\lab09\prj\moduleskovalov\kovalov_lib.h
