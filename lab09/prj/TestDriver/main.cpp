@@ -7,8 +7,10 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "ukr");
-    float tempC, tempSum = 0;
+
     // 9.1
+    cout << "Задача 9.1" << endl;
+
     const float kwh[ARR_S] = {10, 151, -2, -14.45, 800, 806, 1000};
     const float expected_res[ARR_S] = {13.0843, 365.337, 0, 0, 1935.56, 4304.42, 5340.47};
     float eps = 0.002;
@@ -25,27 +27,13 @@ int main()
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // 9.2
     // Обрахунок середньої температури за рік В цельсіях
- /*   for(int i = 0; i < 12; i++){
+    cout << "Задача 9.2" << endl;
+
+    float tempC, tempSum = 0;
+
+    for(int i = 0; i < 12; i++){
         cin >> tempC;
         if(cin.fail()){
             std::cout << ("Введений неправильний тип даних. Введіть число.");
@@ -60,9 +48,10 @@ int main()
             cout << "Середня температура в рік за Фаренгейтом: " << avg_calculation(tempSum) << "°F" <<endl;
         }
     }
-*/
+
     // 9.3
-  /*  int N;
+    cout << "Задача 9.3" << endl;
+    int N;
     cin >> N;
     if(cin.fail()){
         std::cout << ("Введений неправильний тип даних. Введіть число.");
@@ -75,5 +64,5 @@ int main()
         cout << "Кількість двійкових нулів у N:"<< binary_calculation(N) << endl;
     }
 
-*/
+
 }
