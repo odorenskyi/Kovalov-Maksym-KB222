@@ -53,11 +53,6 @@ while (!exit) {
             cout << "Задача 9.2" << endl << "Обрахунок середньої температури за рік В цельсіях." << endl;
             for (int i = 0; i < 12; i++) {
                 cin >> tempC;
-                if(cin.fail()){
-
-                cout << ("Введений неправильний тип даних. Введіть число.") << endl;
-                break;
-            }
                 if (cin.fail()) {
                     cin.clear();
                     cin.ignore(10000, '\n');
@@ -69,7 +64,7 @@ while (!exit) {
 
                 if (i == 11) {
                     tempSum = tempSum / 12;
-                    cout << "Середня температура в рік за Цельсія: " << tempSum << "°C" << endl;
+                    cout << "Середня температура в рік за Цельсія: " << round(tempSum * 100) / 100 << "°C" << endl;
                     cout << "Середня температура в рік за Фаренгейтом: " << avg_calculation(tempSum) << "°F" << endl;
                     break;
                 }
