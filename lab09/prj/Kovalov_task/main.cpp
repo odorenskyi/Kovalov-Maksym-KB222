@@ -65,7 +65,7 @@ while (!exit) {
                 if (i == 11) {
                     tempSum = tempSum / 12;
                     cout << "Середня температура в рік за Цельсія: " << round(tempSum * 100) / 100 << "°C" << endl;
-                    cout << "Середня температура в рік за Фаренгейтом: " << avg_calculation(tempSum) << "°F" << endl;
+                    cout << "Середня температура в рік за Фаренгейтом: " << round(avg_calculation(tempSum * 100)) / 100 << "°F" << endl;
                     break;
                 }
             }
@@ -73,10 +73,10 @@ while (!exit) {
             case 'x':
                cout << "Задача 9.3" << endl << "Кількість двійкових одиниць/нулів" << endl << "Введіть число: ";
                cin >> N;
-               if(cin.fail()){
+               if(cin.fail() || N < 0 || N > 5740500){
                     cin.clear();
                     cin.ignore(10000, '\n');
-                    cout << ("Введений неправильний тип даних. Введіть число.") << endl;
+                    cout << ("Введений неправильний тип даних. Введіть число від 0 до 5740500") << endl;
                     break;
                }
 
