@@ -27,8 +27,8 @@ while (!exit) {
     switch (char_input) {
 
         case 'n':
-            cout << "Задача 9" << endl << "Обчислення площі" << endl;
-
+            cout << "Задача 9.0" << endl << "Обчислення площі." << endl;
+            cout << "Введіть x,y,z:" << endl;
             cin >> x >> y >> z;
             if(cin.fail()){
                 cin.clear();
@@ -36,7 +36,7 @@ while (!exit) {
                 cout << ("Введений неправильний тип даних. Введіть число.") << endl;
                 break;
             }
-            cout << s_calculation(x, y, z);
+            cout << s_calculation(x, y, z) << endl;
             break;
         case 'v':
             cout << "Задача 9.1" << endl << "К-ть спожитої електроенергії за місяць." << endl;
@@ -65,7 +65,7 @@ while (!exit) {
                 if (i == 11) {
                     tempSum = tempSum / 12;
                     cout << "Середня температура в рік за Цельсія: " << round(tempSum * 100) / 100 << "°C" << endl;
-                    cout << "Середня температура в рік за Фаренгейтом: " << round(avg_calculation(tempSum * 100)) / 100 << "°F" << endl;
+                    cout << "Середня температура в рік за Фаренгейтом: " << round(avg_calculation(tempSum * 100)) / 100 << "°F" << endl << endl;
                     break;
                 }
             }
@@ -93,11 +93,12 @@ while (!exit) {
                 cout << "Програма успішно завершена." << endl;
                 break;
             default:
-                cout << "\a";
+                cout << "\a" << "Перевірте, чи вибрана в вас англійська розкладка.\nАбо увімкнено Caps Lock.\n" << endl;
                 break;
         }
     }
-    cout << "Натисніть будь-яку клавішу..." << _getch();
+    cout << "Натисніть будь-яку клавішу...";
+    _getch();
     return 0;
 }
 
