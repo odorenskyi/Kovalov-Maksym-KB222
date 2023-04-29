@@ -28,6 +28,10 @@ float s_calculation(float x, float y, float z){
 }
 
 float kwh_calculation(float kwh) {
+    if(kwh < 0){
+        std::cerr << "Помилка число не може бути менше ";
+        return NULL;
+    }
     float kwh_cost = 5.34047;
     if (kwh > 800) {
         return kwh * kwh_cost;
