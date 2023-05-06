@@ -4,6 +4,7 @@
 #include <string>
 #include <cctype>
 #include <cstring>
+#include <unordered_set>
 // 8 Lab ----------
 const double pi = 3.14159;
 const double e = 2.71828;
@@ -65,13 +66,17 @@ int consonants_num(const char* filename){
         std::string ukr_word;
         std::getline(input_f, ukr_word);
 
+        // Создаем множество из приголосных букв
+        std::unordered_set<char> consonants = {'б', 'в', 'г', 'ґ', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ь'};
+
         for (char c : ukr_word) {
-            if (!std::strchr("бвгґджзйклмнпрстфхцчшщь", c)) {
+            if (consonants.count(c) == 0 && std::isalpha(c)) {
                 c_count++;
+            }
         }
-    }
-    }else{
+        }else{
       std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
+      return -1;
     }
     input_f.close();
     return c_count;
