@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1683570344 source:a:\kovalov-maksym-kb222\lab10\prj\moduleskovalov\main.cpp
+1683579396 source:a:\kovalov-maksym-kb222\lab10\prj\moduleskovalov\main.cpp
 	<cmath>
 	<iostream>
 	<fstream>
@@ -7,4 +7,6 @@
 	<cctype>
 	<cstring>
 	<unordered_set>
+	<chrono>
+	<ctime>
 

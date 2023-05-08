@@ -132,7 +132,7 @@ void write_does_it_has_in(const char* filename, bool found){
     std::ofstream output_f(filename, std::ios::binary | std::ios::app);
 
     if(output_f){
-            if(found){
+            if(found == true){
                 output_f << "Слово присутнє в тексті" << std::endl;
             }else{
                 output_f << "Слова немає в тексті" << std::endl;
