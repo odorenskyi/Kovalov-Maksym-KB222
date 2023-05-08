@@ -75,7 +75,7 @@ int consonants_num(const char* filename){
         std::unordered_set<char> consonants = {'á', 'â', 'ã', '´', 'ä', 'æ', 'ç', 'é', 'ê', 'ë', 'ì', 'í', 'ï', 'ð', 'ñ', 'ò', 'ô', 'õ', 'ö', '÷', 'ø', 'ù', 'ü'};
 
         for (char c : ukr_word) {
-            if (consonants.count(c) == 0 && std::isalpha(c)) {
+            if (consonants.count(c) == 1 && std::isalpha(c)) {
                 c_count++;
             }
         }
