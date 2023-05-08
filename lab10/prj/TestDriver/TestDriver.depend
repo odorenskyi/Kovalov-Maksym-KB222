@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1683577788 source:a:\kovalov-maksym-kb222\lab10\prj\testdriver\main.cpp
+1683583035 source:a:\kovalov-maksym-kb222\lab10\prj\testdriver\main.cpp
 	<iostream>
 	<fstream>
 	"../moduleskovalov/kovalov_lib.h"
 
-1683573884 a:\kovalov-maksym-kb222\lab10\prj\moduleskovalov\kovalov_lib.h
+1683582791 a:\kovalov-maksym-kb222\lab10\prj\moduleskovalov\kovalov_lib.h
 	<string>
 

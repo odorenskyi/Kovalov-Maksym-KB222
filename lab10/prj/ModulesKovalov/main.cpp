@@ -16,18 +16,12 @@ float s_calculation(float x, float y, float z){
     double s=0;
 
     if(x < 0){
-        std::cerr << "Помилка, знаменник x менше нуля" << std::endl;
-        return 1;
+        std::cerr << "Помилка, знаменник x менше ";
+        return NULL;
     }
     if (z == 0 || y == 0) {
-        std::cerr << "Помилка, sin не може дорівнювати 0" << std::endl;
-        return 1;
-    }
-
-    double temp = pow(e, abs(x)) + sqrt(abs(y - z) / sin(z * y));
-    if (temp < 0 || std::isnan(temp)) {
-        std::cerr << "Помилка, квадратний корінь від від'ємного числа" << std::endl;
-        return 1;
+        std::cerr << "Помилка, sin не може дорівнювати 0";
+        return NULL;
     }
 
         s = 0.5*((pow(y,2)+ 2*z)/sqrt(7*pi + x)) - sqrt(pow(e,abs(x))+ (sqrt(abs(y-z)))/sin(z*y));
@@ -36,7 +30,7 @@ float s_calculation(float x, float y, float z){
 }
 
 // Lab 10 ----------
-
+// 1 -------------
 // Структура для запису даних
 struct PersonInfo {
     std::string name;
@@ -61,8 +55,9 @@ void write_info(const char* filename, const PersonInfo& person){
         std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
     }
 }
+// 1 -------------
 
-// 2 ------------- Потрібно відлагодити
+// 2 -------------
 int consonants_num(const char* filename){
     // Кількість приголосних з word.txt
     std::ifstream input_f(filename); // Відкриваємо файл для читання word.txt
@@ -99,7 +94,7 @@ void write_consosnants_num(const char* filename, int c_count){
         }
     output_f.close();
 }
-// 2 ------------- Потрібно відлагодити
+// 2 -------------
 
 // 3 -------------
 
@@ -147,8 +142,10 @@ void write_does_it_has_in(const char* filename, bool found){
     }else{
         std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
     }
+    input_f.close();
     output_f.close();
 }
+// 3 -------------
 // 10.2
 
 void f_l_char(const char* filename){
@@ -183,5 +180,31 @@ void time_date(const char* filename){
         std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
     }
 
+    output_f.close();
+}
+// 10.3 -------------
+// Перевод у двійкову систему
+std::string decToBinary(int n){
+    std::string result = "";
+
+    while (n > 0) {
+        if (n % 2 == 0)
+            result = "0" + result;
+        else
+            result = "1" + result;
+        n /= 2;
+    }
+    return result;
+}
+
+void write_s_calc(const char* filename, float s_calc, std::string number, int b){
+    std::ofstream output_f(filename, std::ios::app | std::ios::ate);
+
+    if(output_f){
+        output_f << "Результат функції s_calculation: " << s_calc << std::endl;
+        output_f << "Число \"" << b << "\" у двійковій системі: " << number << std::endl;
+    }else{
+        std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
+    }
     output_f.close();
 }

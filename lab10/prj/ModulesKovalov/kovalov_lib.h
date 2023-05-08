@@ -6,7 +6,8 @@ using namespace std;
 
 
 float s_calculation(float, float, float);
-// 10.1
+
+// 10.1 -------------
 
 // 10.1_1
 struct PersonInfo {
@@ -20,14 +21,24 @@ struct PersonInfo {
 
 void write_info(const char* filename, const PersonInfo& person);
 // 10.1_2
+
 int consonants_num(const char* filename);
 void write_consosnants_num(const char* filename, int);
+
 // 10.1_3
+
 bool does_it_has_in(const char* filename);
 void write_does_it_has_in(const char* filename, bool);
 
+// 10.1 -------------
+
 // 10.2
+
 void f_l_char(const char* filename);
 void time_date(const char* filename);
+
+// 10.3
+std::string decToBinary(int n);
+void write_s_calc(const char* filename, float, std::string, int);
 
 #endif // KOVALOV_LIB_H_INCLUDED

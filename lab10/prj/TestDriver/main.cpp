@@ -8,10 +8,12 @@ int main()
 {
     setlocale(LC_ALL, "ukr");
 
-    int cons_num;
+    int cons_num, b;
     bool found;
+    float s_calc, x, y, z;
+    string decToBin;
 
-// 10.1
+// 10.1 -------------
 
 // 10.1_1
     PersonInfo person = {
@@ -22,7 +24,6 @@ int main()
     "Україна",
     2023
     };
-// 10.1
 
 // 10.1_2
     write_info("task10_1.txt", person);
@@ -34,14 +35,32 @@ int main()
     }else{
         write_consosnants_num("task10_1.txt", 0);
     }
-// 10.1
 
 // 10.1_3
+
     found = does_it_has_in("text10_1.txt");
     write_does_it_has_in("task10_1.txt", found);
+
+// 10.1 --------------
+
+
 // 10.2
+
     f_l_char("word.txt");
     time_date("word.txt");
 
+// 10.3
+    x = 2,
+    y = 5,
+    z = 7.55,
+    b = 15;
+
+    s_calc = s_calculation(x, y, z);
+    decToBin = decToBinary(b);
+
+    write_s_calc("task10_1.txt", s_calc, decToBin, b);
+
+
+    return 0;
 }
 
