@@ -130,13 +130,20 @@ bool does_it_has_in(const char* filename){
 void write_does_it_has_in(const char* filename, bool found){
     // ------------ Дозапис результата
     std::ofstream output_f(filename, std::ios::binary | std::ios::app);
+    std::ifstream input_f("word.txt");
+
+    std::string ukr_word;
 
     if(output_f){
-            if(found == true){
-                output_f << "Слово присутнє в тексті" << std::endl;
-            }else{
-                output_f << "Слова немає в тексті" << std::endl;
-            }
+        if(input_f){
+            std::getline(input_f, ukr_word);
+        }
+        if(found == true){
+            output_f << "Слово \""<< ukr_word << "\" присутнє в тексті" << std::endl;
+        }else{
+            output_f << "Слова \""<< ukr_word << "\" немає в тексті" << std::endl;
+        }
+
     }else{
         std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
     }
@@ -149,6 +156,7 @@ void f_l_char(const char* filename){
     std::ofstream output_f(filename, std::ios::app | std::ios::ate);
 
     std::string word;
+
     int word_length;
 
     if(input_f && output_f){
