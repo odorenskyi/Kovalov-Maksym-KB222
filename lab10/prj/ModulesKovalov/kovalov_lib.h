@@ -20,4 +20,7 @@ void write_info(const char* filename, const PersonInfo& person);
 int consonants_num(const char* filename);
 void write_consosnants_num(const char* filename, int c_count);
 
+bool does_it_has_in(const char* filename);
+void write_does_it_has_in(const char* filename, bool);
+
 #endif // KOVALOV_LIB_H_INCLUDED

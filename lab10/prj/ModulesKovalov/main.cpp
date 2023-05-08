@@ -30,6 +30,7 @@ float s_calculation(float x, float y, float z){
         return s;
 
 }
+
 // Lab 10 ----------
 
 // Структура для запису даних
@@ -57,7 +58,7 @@ void write_info(const char* filename, const PersonInfo& person){
     }
 }
 
-// 2
+// 2 ------------- Потрібно відлагодити
 int consonants_num(const char* filename){
     // Кількість приголосних з word.txt
     std::ifstream input_f(filename); // Відкриваємо файл для читання word.txt
@@ -66,7 +67,7 @@ int consonants_num(const char* filename){
         std::string ukr_word;
         std::getline(input_f, ukr_word);
 
-        // Создаем множество из приголосных букв
+        // Создаємо множину приголосних літер
         std::unordered_set<char> consonants = {'б', 'в', 'г', 'ґ', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ь'};
 
         for (char c : ukr_word) {
@@ -92,5 +93,47 @@ void write_consosnants_num(const char* filename, int c_count){
         }else{
             std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
         }
+    output_f.close();
+}
+// 2 ------------- Потрібно відлагодити
+
+// 3 -------------
+
+bool does_it_has_in(const char* filename){
+    bool found = false;
+    std::string ukr_word;
+    std::string word;
+// ------------ Відкриваємо файл для зчитання слова яке потрібно шукати
+    std::ifstream word_file("word.txt");
+    std::ifstream read_file(filename);
+    if(read_file && word_file){
+        std::getline(word_file, ukr_word);
+
+        while (read_file >> word) {
+            if (ukr_word == word) {
+                found = true;
+                break;
+            }
+        }
+    }else{
+        std::cerr << "Не вдалося відкрити файл" << std::endl;
+    }
+    read_file.close();
+    word_file.close();
+    return found;
+}
+
+void write_does_it_has_in(const char* filename, bool found){
+    // ------------ Дозапис результата
+    std::ofstream output_f(filename, std::ios::binary | std::ios::app);
+    if(output_f){
+            if(found){
+                output_f << "Слово присутнє в тексті" << std::endl;
+            }else{
+                output_f << "Слова немає в тексті" << std::endl;
+            }
+    }else{
+        std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
+    }
     output_f.close();
 }
