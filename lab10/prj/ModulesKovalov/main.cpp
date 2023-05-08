@@ -5,7 +5,11 @@
 #include <cctype>
 #include <cstring>
 #include <unordered_set>
+#include <chrono>
+#include <ctime>
+
 // 8 Lab ----------
+
 const double pi = 3.14159;
 const double e = 2.71828;
 float s_calculation(float x, float y, float z){
@@ -126,6 +130,7 @@ bool does_it_has_in(const char* filename){
 void write_does_it_has_in(const char* filename, bool found){
     // ------------ Дозапис результата
     std::ofstream output_f(filename, std::ios::binary | std::ios::app);
+
     if(output_f){
             if(found){
                 output_f << "Слово присутнє в тексті" << std::endl;
@@ -135,5 +140,40 @@ void write_does_it_has_in(const char* filename, bool found){
     }else{
         std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
     }
+    output_f.close();
+}
+// 10.2
+
+void f_l_char(const char* filename){
+    std::ifstream input_f(filename);
+    std::ofstream output_f(filename, std::ios::app | std::ios::ate);
+
+    std::string word;
+    int word_length;
+
+    if(input_f && output_f){
+        std::getline(input_f, word);
+
+        word_length = word.length();
+        output_f << "\nПерша буква слова: " << word[0] << std::endl
+                 << "Остання буква слова: " << word[word_length - 1] << std::endl;
+    }else{
+        std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
+    }
+    input_f.close();
+    output_f.close();
+}
+
+void time_date(const char* filename){
+    std::ofstream output_f(filename, std::ios::app | std::ios::ate);
+
+    if(output_f){
+        auto now = std::chrono::system_clock::now();
+        std::time_t now_c = std::chrono::system_clock::to_time_t(now);
+        output_f << "Дата та час дозапису інформації: " << std::ctime(&now_c);
+    }else{
+        std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
+    }
+
     output_f.close();
 }

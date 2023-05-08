@@ -4,13 +4,16 @@
 
 using namespace std;
 
-bool does_it_has_in(const char* filename);
-
 int main()
 {
     setlocale(LC_ALL, "ukr");
+
     int cons_num;
     bool found;
+
+// 10.1
+
+// 10.1_1
     PersonInfo person = {
     "Максим",
     "Ковальов",
@@ -19,7 +22,9 @@ int main()
     "Україна",
     2023
     };
+// 10.1
 
+// 10.1_2
     write_info("task10_1.txt", person);
 
     cons_num = consonants_num("word.txt");
@@ -29,7 +34,14 @@ int main()
     }else{
         write_consosnants_num("task10_1.txt", 0);
     }
+// 10.1
+
+// 10.1_3
     found = does_it_has_in("text10_1.txt");
     write_does_it_has_in("task10_1.txt", found);
+// 10.2
+    f_l_char("word.txt");
+    time_date("word.txt");
+
 }
 
