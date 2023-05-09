@@ -50,10 +50,10 @@ int main()
     time_date("word.txt");
 
 // 10.3
-    x = 2,
-    y = 5,
-    z = 7.55,
-    b = 15;
+    x = 6,
+    y = 4,
+    z = 1.42,
+    b = 5;
 
     s_calc = s_calculation(x, y, z);
     decToBin = decToBinary(b);
