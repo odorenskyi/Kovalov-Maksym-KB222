@@ -54,6 +54,7 @@ void write_info(const char* filename, const PersonInfo& person){
     }else{
         std::cerr << "Не вдалося відкрити цей файл: " << filename << std::endl;
     }
+    op_file.close();
 }
 // 1 -------------
 
