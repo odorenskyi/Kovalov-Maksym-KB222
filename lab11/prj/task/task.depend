@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1684869358 source:a:\kovalov-maksym-kb222\lab11\prj\task\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<algorithm>
+
