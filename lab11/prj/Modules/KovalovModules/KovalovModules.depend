@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1685555008 source:a:\kovalov-maksym-kb222\lab11\prj\modules\kovalovmodules\main.cpp
+	"KovalovModules.h"
+	<algorithm>
+
+1685555155 a:\kovalov-maksym-kb222\lab11\prj\modules\kovalovmodules\kovalovmodules.h
+	<vector>
+	<string>
+	"../KikhotModules/KikhotModules.h"
+
+1685554912 a:\kovalov-maksym-kb222\lab11\prj\modules\kikhotmodules\kikhotmodules.h
+	<vector>
+	<string>
+
