@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1685965952 source:a:\kovalov-maksym-kb222\lab12\prj\moduleskovalov\main.cpp
+	<iostream>
+	<cmath>
+
