@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1685995410 source:a:\kovalov-maksym-kb222\lab12\prj\kovalov_task\main.cpp
+1685996165 source:a:\kovalov-maksym-kb222\lab12\prj\testdriver\main.cpp
 	<iostream>
 	<cmath>
-	<windows.h>
+	<limits>
 	"../moduleskovalov/kovalov_lib.h"
 
 1685966318 a:\kovalov-maksym-kb222\lab12\prj\moduleskovalov\kovalov_lib.h

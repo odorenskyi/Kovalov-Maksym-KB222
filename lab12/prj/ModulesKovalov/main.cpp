@@ -3,8 +3,18 @@
 #include <cmath>
 
 ConeRoof::ConeRoof(double r, double h) {
-    radius = r;
-    height = h;
+    if (r > 0) {
+        radius = r;
+    } else {
+        throw std::invalid_argument("Неприпустиме значення радіуса!");
+    }
+    if (h > 0) {
+        height = h;
+    } else {
+        throw std::invalid_argument("Неприпустиме значення висоти!");
+    }
+
+
 }
 
 double ConeRoof::getRadius() const {
